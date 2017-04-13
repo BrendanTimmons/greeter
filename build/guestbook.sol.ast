@@ -1,0 +1,127 @@
+PragmaDirective
+   Source: "pragma solidity ^0.4.0;"
+ContractDefinition "GuestBook"
+   Source: "contract GuestBook {\n    address creator;\n    string message;\n\n    function GuestBook(string _message) public {\n        creator = msg.sender;\n        message = _message;\n    }\n    \n    function readMsg() constant returns (string){\n        return message;\n    }\n\n    function writeMessage(string _newmessage){\n        message = _newmessage;\n    }\n\n    // kill to recover funds\n    \n    function kill(){ \n        if (msg.sender == creator)\n            suicide(creator);  \n    }\n}"
+  VariableDeclaration "creator"
+     Type: address
+     Source: "address creator"
+    ElementaryTypeName address
+       Source: "address"
+  VariableDeclaration "message"
+     Type: string storage ref
+     Source: "string message"
+    ElementaryTypeName string
+       Source: "string"
+  FunctionDefinition "GuestBook" - public
+     Source: "function GuestBook(string _message) public {\n        creator = msg.sender;\n        message = _message;\n    }"
+    ParameterList
+       Source: "(string _message)"
+      VariableDeclaration "_message"
+         Type: string memory
+         Source: "string _message"
+        ElementaryTypeName string
+           Source: "string"
+    ParameterList
+       Source: ""
+    Block
+       Source: "{\n        creator = msg.sender;\n        message = _message;\n    }"
+      ExpressionStatement
+         Source: "creator = msg.sender"
+        Assignment using operator =
+           Type: address
+           Source: "creator = msg.sender"
+          Identifier creator
+             Type: address
+             Source: "creator"
+          MemberAccess to member sender
+             Type: address
+             Source: "msg.sender"
+            Identifier msg
+               Type: msg
+               Source: "msg"
+      ExpressionStatement
+         Source: "message = _message"
+        Assignment using operator =
+           Type: string storage ref
+           Source: "message = _message"
+          Identifier message
+             Type: string storage ref
+             Source: "message"
+          Identifier _message
+             Type: string memory
+             Source: "_message"
+  FunctionDefinition "readMsg" - public - const
+     Source: "function readMsg() constant returns (string){\n        return message;\n    }"
+    ParameterList
+       Source: "()"
+    ParameterList
+       Source: "(string)"
+      VariableDeclaration ""
+         Type: string memory
+         Source: "string"
+        ElementaryTypeName string
+           Source: "string"
+    Block
+       Source: "{\n        return message;\n    }"
+      Return
+         Source: "return message"
+        Identifier message
+           Type: string storage ref
+           Source: "message"
+  FunctionDefinition "writeMessage" - public
+     Source: "function writeMessage(string _newmessage){\n        message = _newmessage;\n    }"
+    ParameterList
+       Source: "(string _newmessage)"
+      VariableDeclaration "_newmessage"
+         Type: string memory
+         Source: "string _newmessage"
+        ElementaryTypeName string
+           Source: "string"
+    ParameterList
+       Source: ""
+    Block
+       Source: "{\n        message = _newmessage;\n    }"
+      ExpressionStatement
+         Source: "message = _newmessage"
+        Assignment using operator =
+           Type: string storage ref
+           Source: "message = _newmessage"
+          Identifier message
+             Type: string storage ref
+             Source: "message"
+          Identifier _newmessage
+             Type: string memory
+             Source: "_newmessage"
+  FunctionDefinition "kill" - public
+     Source: "function kill(){ \n        if (msg.sender == creator)\n            suicide(creator);  \n    }"
+    ParameterList
+       Source: "()"
+    ParameterList
+       Source: ""
+    Block
+       Source: "{ \n        if (msg.sender == creator)\n            suicide(creator);  \n    }"
+      IfStatement
+         Source: "if (msg.sender == creator)\n            suicide(creator)"
+        BinaryOperation using operator ==
+           Type: bool
+           Source: "msg.sender == creator"
+          MemberAccess to member sender
+             Type: address
+             Source: "msg.sender"
+            Identifier msg
+               Type: msg
+               Source: "msg"
+          Identifier creator
+             Type: address
+             Source: "creator"
+        ExpressionStatement
+           Source: "suicide(creator)"
+          FunctionCall
+             Type: tuple()
+             Source: "suicide(creator)"
+            Identifier suicide
+               Type: function (address)
+               Source: "suicide"
+            Identifier creator
+               Type: address
+               Source: "creator"
