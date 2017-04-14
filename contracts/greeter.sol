@@ -27,3 +27,4 @@ contract greeter is mortal{
     //    message = _newmessage;
     //}
 }
+

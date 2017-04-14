@@ -1,0 +1,55 @@
+{
+  "contract_name": "depositor",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "currBalance",
+      "outputs": [],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "balance",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_value",
+          "type": "uint256"
+        }
+      ],
+      "name": "deposit",
+      "outputs": [
+        {
+          "name": "_newValue",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    }
+  ],
+  "unlinked_binary": "0x606060405234610000575b60c8806100186000396000f300606060405263ffffffff60e060020a6000350416631dfe52db81146036578063b69ef8a8146042578063b6b55f2514605e575b6000565b346000576040607d565b005b34600057604c6086565b60408051918252519081900360200190f35b34600057604c600435608c565b60408051918252519081900360200190f35b6103e86000555b565b60005481565b600080548201908190555b9190505600a165627a7a72305820504b763c7b20ff2f883e209a0539dc276cf15dd7f81ef07ff8791135d65917340029",
+  "networks": {
+    "1492140693176": {
+      "events": {},
+      "links": {},
+      "address": "0xa8d007a482f45029884494e476cf14ae4c1cd8ce",
+      "updated_at": 1492143532402
+    }
+  },
+  "schema_version": "0.0.5",
+  "updated_at": 1492143532402
+}
