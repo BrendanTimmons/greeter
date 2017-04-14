@@ -2,7 +2,8 @@
 
 1. start a testrpc server
 
-$ testrpc```
+```$ testrpc
+```
 
 2. start truffle console
 
