@@ -2,11 +2,11 @@
 
 1. start a testrpc server
 
-$ testrpc
+```$ testrpc```
 
 2. start truffle console
 
-$ truffle console
+```$ truffle console```
 
 3. get some accounts into some easy variables (our own little ENS wew)
 
