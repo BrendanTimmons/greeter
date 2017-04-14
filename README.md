@@ -39,5 +39,10 @@ transferring from the eth account 0 by default.
 
 ```
 $ bank.getBalance(account2)
+```
+
+and transferring more than our balance, just burns gas, doesn't transfer.
+
+```
 $ bank.transfer(account3, 10000)
 ```
